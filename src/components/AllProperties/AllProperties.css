@@ -1,0 +1,56 @@
+.container{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid rgb(221, 83, 28); /* Blue */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.load{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: -5.5rem;
+}
+
+
+.properties{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.property-card{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+    width: 30vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    min-height: 42vh;
+    text-align: center;
+}
+
+.property-image{
+  max-height: 8rem;
+  max-width: 28vw;
+  border: 2px solid rgb(172, 169, 169);
+}
+
+/* @meidia screen() */
