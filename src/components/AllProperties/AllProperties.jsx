@@ -22,7 +22,7 @@ const AllProperties = () => {
                 <h2>{data.type}</h2>
                 <img src={data.thumbnail} alt="" className="property-image"/>
                 <p className='property-price'>{data.price}</p>
-                <p>{data.address}</p>
+                <p className='property-address'><span className='label'>Address: </span>{data.address}</p>
                 <p>{data.description}</p>
                 <ul>
                   <h3>Amenities</h3>
