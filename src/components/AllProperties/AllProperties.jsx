@@ -20,7 +20,7 @@ const AllProperties = () => {
             propertyData?.map((data)=>(
                 <div className='property-card' key={data.id}>
                 <h2>{data.type}</h2>
-                <img src={data.thumbnail} alt="" className="property-image"/>
+                <img src={data.thumbnail} alt="Property" className="property-image"/>
                 <p className='property-price'>{data.price}</p>
                 <p className='property-address'><span className='label'>Address: </span>{data.address}</p>
                 <p>{data.description}</p>
