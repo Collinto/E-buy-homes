@@ -6,8 +6,8 @@
     justify-content: center;
 }
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid rgb(221, 83, 28); /* Blue */
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid rgb(221, 83, 28); 
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -53,4 +53,27 @@
   border: 2px solid rgb(172, 169, 169);
 }
 
-/* @meidia screen() */
+.label{
+  font-weight: bold;
+}
+
+.buy-button{
+  padding: 2px;
+  background-color: rgb(221, 83, 28);
+  color: white;
+  outline: none;
+  border: none;
+  width: 60%;
+  margin-top: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.buy-button:hover{
+  transform: scale(1.1);
+  background-color: rgba(221, 83, 28, 0.753);
+}
+
+.buy-button:active{
+  transform: scale(.8);
+}

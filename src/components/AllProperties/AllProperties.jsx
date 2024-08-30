@@ -5,6 +5,7 @@ import "./AllProperties.css";
 const AllProperties = () => {
     const {propertyData, error, loading} = useFetch("https://ebuy-api.onrender.com/");
 
+
     if (loading) return <div className='container'>
         <div className="loader"></div>
         <div className="load">LOADING...</div> 
@@ -23,13 +24,15 @@ const AllProperties = () => {
                 <img src={data.thumbnail} alt="Property" className="property-image"/>
                 <p className='property-price'>{data.price}</p>
                 <p className='property-address'><span className='label'>Address: </span>{data.address}</p>
+                <p className='property-location'><span className='label'>Location: </span>{data.location}</p>
                 <p>{data.description}</p>
                 <ul>
-                  <h3>Amenities</h3>
+                  <h3 className='label'>Amenities</h3>
                 {data.amenities.map((amenity)=>(
                   <li>{amenity}</li>
                 ))}
                 </ul>
+                <button className='buy-button' onClick={()=>{window.open(`${propertyData.sellerlink}`)}}>BUY</button>
                 </div>
             ))
         }
