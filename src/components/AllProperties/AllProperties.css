@@ -38,13 +38,14 @@
 .property-card{
   display: flex;
   flex-direction: column;
-  place-items: center;
+  align-items: center;
     width: 30vw;
     padding: 10px;
     border-radius: 20px;
     border: 1px solid grey;
     min-height: 42vh;
     text-align: center;
+    justify-content: space-evenly;
 }
 
 .property-image{
@@ -55,6 +56,7 @@
 
 .label{
   font-weight: bold;
+  color: rgb(38, 40, 56);
 }
 
 .buy-button{
@@ -76,4 +78,16 @@
 
 .buy-button:active{
   transform: scale(.8);
+}
+
+
+@media (max-width: 550px) {
+ .properties{
+  display: block;
+ } 
+
+ .property-card{
+  margin: 20px;
+  width: 60vw;
+ }
 }

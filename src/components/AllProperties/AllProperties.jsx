@@ -20,7 +20,7 @@ const AllProperties = () => {
          {
             propertyData?.map((data)=>(
                 <div className='property-card' key={data.id}>
-                <h2>{data.type}</h2>
+                <h2 className='label'>{data.type}</h2>
                 <img src={data.thumbnail} alt="Property" className="property-image"/>
                 <p className='property-price'>{data.price}</p>
                 <p className='property-address'><span className='label'>Address: </span>{data.address}</p>
@@ -28,8 +28,8 @@ const AllProperties = () => {
                 <p>{data.description}</p>
                 <ul>
                   <h3 className='label'>Amenities</h3>
-                {data.amenities.map((amenity)=>(
-                  <li>{amenity}</li>
+                {data.amenities.map((amenity, index)=>(
+                  <li key={index}>{amenity}</li>
                 ))}
                 </ul>
                 <button className='buy-button' onClick={()=>{window.open(`${propertyData.sellerlink}`)}}>BUY</button>
